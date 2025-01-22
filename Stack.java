@@ -31,4 +31,17 @@ public class Stack<T> {
         }
         return (T) stackArray[top];
     }
+    public String list() {
+        if (top == -1) {
+            return "Stack is empty.";
+        }
+        String result = "";
+        for (int i = 0; i <= top; i++) {
+            result += stackArray[i].toString();
+            if (i < top) {
+                result += ";";
+            }
+        }
+        return result;
+    }
 }
